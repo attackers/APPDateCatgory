@@ -16,8 +16,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    return YES;
+
+    _lotteryDelegate = [[LotteryAppDelegate alloc]init];
+    self.window = _lotteryDelegate.window;
+    return [_lotteryDelegate application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
 
